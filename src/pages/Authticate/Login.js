@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-pascal-case */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
