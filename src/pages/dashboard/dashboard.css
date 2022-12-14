@@ -46,7 +46,6 @@
     text-decoration: none;
     text-decoration-color: none;
     color: black;
-    font-weight: bold;
   }
     .title {
       font-weight: bold;
@@ -68,7 +67,7 @@
     }
 
     .bottom {
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid rgba(181, 168, 168, 0.655);
       width: 170px;
     }
 

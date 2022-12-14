@@ -44,12 +44,15 @@ export default class dashboard extends Component {
                             redirect='/transaction' 
                             title='S & L' 
                             link='Supply and Logistics'
+                            backgroundColor= '#d25f20'
+                            color= '#fff'
                             icon={(
                                     <LocalShipping
                                         className="icon"
                                         fontSize='large'
                                         style={{
-                                        backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                            backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                            color: '#fff'
                                         }}
                                     />
                                 )} 
@@ -58,12 +61,15 @@ export default class dashboard extends Component {
                             redirect='/eum'
                             title='EUM'
                             link='End User Monitoring'
+                            backgroundColor='#20b0d2'
+                            color='#fff'
                             icon={(
                                     <LiveHelp
                                         className="icon"
                                         fontSize='large'
                                         style={{
-                                        backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                            backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                            color: '#fff'
                                         }}
                                     />
                                 )}
@@ -74,11 +80,16 @@ export default class dashboard extends Component {
                             redirect='/pmv'
                             title='PMV'
                             link='Performance Monitoring Visit'
+                            backgroundColor='#046350'
+                            color='#fff'
                             icon={ (
                                     <LeakAdd
                                         className="icon"
                                         fontSize='large'
-                                        style={{ backgroundColor: "rgba(160, 160, 160, 0.349)",}}
+                                        style={{ 
+                                            backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                            color: '#fff'
+                                        }}
                                     />
                                 )}
                         />
@@ -86,13 +97,16 @@ export default class dashboard extends Component {
                             redirect='/setting'
                             title='Settings'
                             link='Configuration the application'
+                            backgroundColor='#98face'
+                            color='#fff'
                             icon={(
                                 <Settings
                                     className="icon"
-                                    style={{
-                                    backgroundColor: "rgba(160, 160, 160, 0.349)",
-                                    }}
                                     fontSize='large'
+                                    style={{
+                                        backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                        color: '#fff'
+                                    }}
                                 />
                                 )}
                         />
