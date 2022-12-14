@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { InputAdornment, makeStyles, Paper, Toolbar } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
 import React from 'react';
