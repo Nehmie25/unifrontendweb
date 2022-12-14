@@ -4,8 +4,6 @@ import { makeStyles, CssBaseline, createTheme, ThemeProvider } from '@material-u
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import dashboard from '../pages/dashboard/dashboard';
 import Login from '../pages/Authticate/Login';
-import Paiement from '../pages/paiements/Paiement';
-import Region from '../pages/regions/Region'
 import Transfer from '../pages/logistic/transfer/Transfer';
 import Transaction from '../pages/logistic/Transaction';
 import Acknowledge from '../pages/logistic/acknowledge/Acknowledge';
@@ -58,7 +56,6 @@ function App() {
               <Route path="/transfer" exact component={ Transfer } />
               <Route path="/transaction" exact component={ Transaction } />
               <Route path="/acknowledge" exact component={ Acknowledge } />
-              <Route path="/paiements" exact component={ Paiement } />
             </Switch>
           </div>
           <CssBaseline />
