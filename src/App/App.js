@@ -50,7 +50,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <div className={classes.appMain}>
-            <Switch initialRoute={Login}>
+            <Switch>
             <Route path="/unifrontendweb" exact component={ Login } />
               <Route path="/dashboard" exact component={ dashboard } />
               <Route path="/transfer" exact component={ Transfer } />
