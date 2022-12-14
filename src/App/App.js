@@ -47,7 +47,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+    <Login />
+      {/* <BrowserRouter>
         <ThemeProvider theme={theme}>
           <div className={classes.appMain}>
             <Switch>
@@ -60,7 +61,7 @@ function App() {
           </div>
           <CssBaseline />
         </ThemeProvider>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }
