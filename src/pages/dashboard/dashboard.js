@@ -1,7 +1,5 @@
-import { KeyboardArrowUp, LeakAdd, LiveHelp, LocalShipping, Settings } from '@material-ui/icons';
+import { LeakAdd, LiveHelp, LocalShipping, Settings } from '@material-ui/icons';
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import Header from '../../components/Header';
 import * as authService from '../../services/authService';
 import './dashboard.css'
 import Widget from './Widget';
@@ -25,16 +23,8 @@ export default class dashboard extends Component {
             this.setState({ currentUser: currentUser, userReady: false})
         }
     }
-    handleNext() {
-        <Redirect to={'/transaction'} />
-    }
 
     render() {
-        if(this.state.redirect) {
-            return <Redirect to={this.state.redirect} />
-        }
-
-        const { currentUser, userReady } = this.state;
         
         return(
             <>
