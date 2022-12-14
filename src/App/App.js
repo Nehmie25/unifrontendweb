@@ -47,12 +47,11 @@ function App() {
 
   return (
     <>
-    <Login />
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <ThemeProvider theme={theme}>
           <div className={classes.appMain}>
-            <Switch>
-            <Route path="/" exact component={ Login } />
+            <Switch initialRoute={Login}>
+            <Route path="/unifrontendweb" exact component={ Login } />
               <Route path="/dashboard" exact component={ dashboard } />
               <Route path="/transfer" exact component={ Transfer } />
               <Route path="/transaction" exact component={ Transaction } />
@@ -61,7 +60,7 @@ function App() {
           </div>
           <CssBaseline />
         </ThemeProvider>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 }
