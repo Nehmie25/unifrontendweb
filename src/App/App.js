@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import './App.css';
 import { makeStyles, CssBaseline, createTheme, ThemeProvider } from '@material-ui/core';
@@ -59,7 +60,6 @@ function App() {
               <Route path="/acknowledge" exact component={ Acknowledge } />
             </Switch>
           </div>
-          <CssBaseline />
         </ThemeProvider>
       </BrowserRouter>
     </>

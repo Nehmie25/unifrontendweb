@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-pascal-case */
-/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Card, Grid,makeStyles,Paper } from '@material-ui/core'
 import Controls from '../../components/controls/Controls';
@@ -84,16 +83,16 @@ export default function Login(props) {
     //         })
     // }, [recordForEdit])
     const img = {gap: '15px', position:'center', padding:'0px', height: '90px', margin:'0rem'};
-    const paperStyle={ padding:'20px', width: 350, height: '85vh', margin: '50px'}
+    const paperStyle={ padding:'20px', width: 350, height: '70vh', margin: '50px'}
     const btnstyle={margin:'8px 0'}
     const classes = useStyles();
     return (
         <>
             <Form onSubmit={handleSubmit}>
-                <div className={classes.appMain}>
+                <div align='center'>
                     <Card style={paperStyle}>
                         <Grid align='center'>
-                            <img style={img} src='logoUni.jpg'/>
+                            <img style={img} src='logoUni.jpg' alt=''/>
                             <h2>LOGIN IN</h2>
                         </Grid>
                         {values.message && (
