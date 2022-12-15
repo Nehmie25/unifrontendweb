@@ -1,5 +1,6 @@
 import { LeakAdd, LiveHelp, LocalShipping, Settings } from '@material-ui/icons';
 import React, { Component } from 'react';
+import Header from '../../components/Header';
 import * as authService from '../../services/authService';
 import './dashboard.css'
 import Widget from './Widget';
@@ -28,6 +29,7 @@ export default class dashboard extends Component {
         
         return(
             <>
+                <Header />
                 <div className='dash'> 
                     <div className='widgets'>
                         <Widget 

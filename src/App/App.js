@@ -39,6 +39,7 @@ const theme = createTheme({
 
 const useStyles = makeStyles({
   appMain: {
+    
   }
 })
 
@@ -52,7 +53,7 @@ function App() {
           <div className={classes.appMain}>
             <Switch>
             <Route path="/unifrontendweb" exact component={ Login } />
-              <Route path="unifrontendweb/dashboard" exact component={ dashboard } />
+              <Route path="/dashboard" exact component={ dashboard } />
               <Route path="/transfer" exact component={ Transfer } />
               <Route path="/transaction" exact component={ Transaction } />
               <Route path="/acknowledge" exact component={ Acknowledge } />

@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-pascal-case */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { Grid,Paper } from '@material-ui/core'
+import { Card, Grid,makeStyles,Paper } from '@material-ui/core'
 import Controls from '../../components/controls/Controls';
 import { useFormL, Form } from '../../components/useFormL';
 import { CircularProgress } from '@material-ui/core';
@@ -16,6 +16,12 @@ const initialValues = {
     checkedB: false
 
 }
+
+const useStyles = makeStyles(theme => ({
+    appMain: {
+
+    }
+  }))
 
 export default function Login(props) {
     //const { addOrEdit, recordForEdit } = props
@@ -41,7 +47,7 @@ export default function Login(props) {
             values.loading = true
                 authService.login(values.username, values.password)
                     .then(() => {
-                        props.history.push("unifrontendweb/dashboard")
+                        props.history.push("/dashboard")
                         window.location.reload();
                     },
                     error => {
@@ -77,16 +83,15 @@ export default function Login(props) {
     //             ...recordForEdit
     //         })
     // }, [recordForEdit])
-    const align = { paddingLeft: '400px' }
     const img = {gap: '15px', position:'center', padding:'0px', height: '90px', margin:'0rem'};
-    const paperStyle={ padding:'20px', height:'85vh', width:350, margin:"50px"}
+    const paperStyle={ padding:'20px', width: 350, height: '85vh', margin: '50px'}
     const btnstyle={margin:'8px 0'}
-
+    const classes = useStyles();
     return (
         <>
             <Form onSubmit={handleSubmit}>
-                <Grid style={align}>
-                    <Paper style={paperStyle}>
+                <div className={classes.appMain}>
+                    <Card style={paperStyle}>
                         <Grid align='center'>
                             <img style={img} src='logoUni.jpg'/>
                             <h2>LOGIN IN</h2>
@@ -137,8 +142,8 @@ export default function Login(props) {
                                 fullWidth
                             />
                         </div>
-                    </Paper>
-                </Grid>
+                    </Card>
+                </div>
             </Form>
         </>
     );
