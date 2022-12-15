@@ -5,7 +5,7 @@ import { Card, Grid,makeStyles,Paper } from '@material-ui/core'
 import Controls from '../../components/controls/Controls';
 import { useFormL, Form } from '../../components/useFormL';
 import { CircularProgress } from '@material-ui/core';
-import * as authService from '../../services/authService'
+import * as authService from '../../services/authService';
 
 const initialValues = {
     username: '',
@@ -82,7 +82,7 @@ export default function Login(props) {
     //             ...recordForEdit
     //         })
     // }, [recordForEdit])
-    const img = {gap: '15px', position:'center', padding:'0px', height: '90px', margin:'0rem'};
+    const img = {height: '80px'};
     const paperStyle={ padding:'20px', width: 350, height: '70vh', margin: '50px'}
     const btnstyle={margin:'8px 0'}
     const classes = useStyles();

@@ -53,8 +53,8 @@ function App() {
         <ThemeProvider theme={theme}>
           <div className={classes.appMain}>
             <Switch>
-            <Route path="/unifrontendweb" exact component={ Login } />
-              <Route path="/dashboard" exact component={ dashboard } />
+            {/* <Route path="/unifrontendweb" exact component={ Login } /> */}
+              <Route path="/unifrontendweb" exact component={ dashboard } />
               <Route path="/transfer" exact component={ Transfer } />
               <Route path="/transaction" exact component={ Transaction } />
               <Route path="/acknowledge" exact component={ Acknowledge } />
