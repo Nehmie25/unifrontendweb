@@ -57,11 +57,11 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <BrowserRouter basename='/unifrontendweb'>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
               <Route exact path="/" component={ Login } />
               <Route path="/dashboard" component={ dashboard } />
-              {/* <Route path="/logistics"  component={ Logistics } />
+              <Route path="/logistics"  component={ Logistics } />
               <Route path="/transfer" component={ Transfer } />
               <Route path="/transactions" component={ Transaction } />
               <Route path="/acknowledge" component={ Acknowledge } />
@@ -72,7 +72,7 @@ function App() {
               <Route path="/inventory" component={ Inventory } />
               <Route path="/dispatch" component={ Dispatch } />
               <Route path="/eum" component={ Eum } />
-              <Route path="/nutrition" component={ Nutrition } /> */}
+              <Route path="/nutrition" component={ Nutrition } />
             </Switch>
         </BrowserRouter>
       </ThemeProvider>
