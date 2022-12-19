@@ -60,8 +60,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
-              <Route exact path="/" component={ Login } />
-              <Route path="/dashboard" component={ dashboard } />
+              <Route exact path="/dashboard" component={ Login } />
+              <Route path="/" component={ dashboard } />
               <Route path="/logistics"  component={ Logistics } />
               <Route path="/transfer" component={ Transfer } />
               <Route path="/transactions" component={ Transaction } />
