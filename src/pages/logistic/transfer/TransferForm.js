@@ -1,16 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import { useFormAdmin, Form } from "../../../components/useFormAdmin";
 import { Grid, } from '@material-ui/core';
 import Controls from "../../../components/controls/Controls";
 import * as adminService from "../../../services/adminService";
 import { useState } from "react";
-
-
-// const genderItems = [
-//     { id: 'action_sur_admins', title: 'Crer et modifier sous-admin' },
-//     { id: 'action_sur_associations', title: 'Creer et modifier association' },
-//     { id: 'action_sur_membres', title: 'Creer et modifier membre-association' },
-// ]
 
 const initialeValues = {
     logistic_type: '',

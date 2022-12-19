@@ -1,5 +1,7 @@
-import { LeakAdd, LiveHelp, LocalShipping, Settings } from '@material-ui/icons';
+/* eslint-disable no-unused-vars */
+import { KeyboardArrowUp, LeakAdd, LiveHelp, LocalShipping, Settings } from '@material-ui/icons';
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import Header from '../../components/Header';
 import * as authService from '../../services/authService';
 import './dashboard.css'
@@ -24,8 +26,16 @@ export default class dashboard extends Component {
             this.setState({ currentUser: currentUser, userReady: false})
         }
     }
+    handleNext() {
+        <Redirect to={'/transaction'} />
+    }
 
     render() {
+        if(this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+        }
+
+        const { currentUser, userReady } = this.state;
         
         return(
             <>
@@ -33,7 +43,7 @@ export default class dashboard extends Component {
                 <div className='dash'> 
                     <div className='widgets'>
                         <Widget 
-                            redirect='/transaction' 
+                            redirect='/logistics' 
                             title='S & L' 
                             link='Supply and Logistics'
                             backgroundColor= '#d25f20'
@@ -43,7 +53,7 @@ export default class dashboard extends Component {
                                         className="icon"
                                         fontSize='large'
                                         style={{
-                                            backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                            backgroundColor: "rgba(219, 211, 211, 0.705)",
                                             color: '#fff'
                                         }}
                                     />
@@ -60,7 +70,7 @@ export default class dashboard extends Component {
                                         className="icon"
                                         fontSize='large'
                                         style={{
-                                            backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                            backgroundColor: "rgba(219, 211, 211, 0.705)",
                                             color: '#fff'
                                         }}
                                     />
@@ -79,7 +89,7 @@ export default class dashboard extends Component {
                                         className="icon"
                                         fontSize='large'
                                         style={{ 
-                                            backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                            backgroundColor: "rgba(219, 211, 211, 0.705)",
                                             color: '#fff'
                                         }}
                                     />
@@ -96,7 +106,7 @@ export default class dashboard extends Component {
                                     className="icon"
                                     fontSize='large'
                                     style={{
-                                        backgroundColor: "rgba(160, 160, 160, 0.349)",
+                                        backgroundColor: "rgba(219, 211, 211, 0.705)",
                                         color: '#fff'
                                     }}
                                 />

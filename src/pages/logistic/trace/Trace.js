@@ -1,10 +1,12 @@
 import { CameraAlt, Scanner, Search } from '@material-ui/icons';
 import React from 'react';
+import Header from '../../../components/Header';
 import Widget from '../../dashboard/Widget';
 
 function Trace(props) {
     return ( 
         <> 
+           <Header />
            <div className='dash'> 
                 <div className='widgets'>
                     <Widget 
@@ -25,7 +27,6 @@ function Trace(props) {
                             )} 
                     />
                     <Widget 
-                        redirect='/scan' 
                         title='SCAN PRODUCT' 
                         link='Scan product'
                         backgroundColor='#046350'
@@ -44,7 +45,6 @@ function Trace(props) {
                 </div>
                 <div className='widgets'>
                     <Widget 
-                        redirect='/snap' 
                         title='SNAP PRODUCT' 
                         link='Snap product'
                         backgroundColor='#046350'

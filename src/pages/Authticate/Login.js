@@ -1,11 +1,12 @@
-/* eslint-disable react/jsx-pascal-case */
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-pascal-case */
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { Card, Grid,makeStyles,Paper } from '@material-ui/core'
+import { Grid,Paper } from '@material-ui/core'
 import Controls from '../../components/controls/Controls';
 import { useFormL, Form } from '../../components/useFormL';
 import { CircularProgress } from '@material-ui/core';
-import * as authService from '../../services/authService';
+import * as authService from '../../services/authService'
 
 const initialValues = {
     username: '',
@@ -15,12 +16,6 @@ const initialValues = {
     checkedB: false
 
 }
-
-const useStyles = makeStyles(theme => ({
-    appMain: {
-
-    }
-  }))
 
 export default function Login(props) {
     //const { addOrEdit, recordForEdit } = props
@@ -82,18 +77,18 @@ export default function Login(props) {
     //             ...recordForEdit
     //         })
     // }, [recordForEdit])
-    const img = {height: '80px'};
-    const paperStyle={ padding:'20px', width: 350, height: '70vh', margin: '50px'}
+    const img = {position:'center', height: '80px'};
+    const paperStyle={ padding:'15px', height:'75vh', width:250, margin:"3rem", justifyContent: 'center', flex:1}
     const btnstyle={margin:'8px 0'}
-    const classes = useStyles();
+
     return (
         <>
             <Form onSubmit={handleSubmit}>
                 <div align='center'>
-                    <Card style={paperStyle}>
+                    <Paper style={paperStyle}>
                         <Grid align='center'>
-                            <img style={img} src='logoUni.jpg' alt=''/>
-                            <h2>LOGIN IN</h2>
+                            <img style={img} src={'logoUni.jpg'} />
+                            <h4>LOGIN IN</h4>
                         </Grid>
                         {values.message && (
                             <div className='form-group'>
@@ -141,7 +136,7 @@ export default function Login(props) {
                                 fullWidth
                             />
                         </div>
-                    </Card>
+                    </Paper>
                 </div>
             </Form>
         </>

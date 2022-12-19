@@ -2,7 +2,7 @@
   "name": "unifrontendweb",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://Nehmie25.github.io/unifrontendweb",
+  "homepage": "https://djirufin.github.io/unifrontendweb",
   "dependencies": {
     "@date-io/date-fns": "^1.3.13",
     "@material-ui/core": "^4.10.2",
@@ -26,10 +26,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "protocol": "https://",
+    "host": "djirufin.github.io/unifrontendweb",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -37,15 +40,6 @@
       "react-app",
       "react-app/jest"
     ]
-  },
-  "rules": {
-    "jsx-a11y/alt-text": [ 2, {
-        "elements": [ "img", "object", "area", "input[type=\"image\"]" ],
-        "img": ["Image"],
-        "object": ["Object"],
-        "area": ["Area"],
-        "input[type=\"image\"]": ["InputImage"]
-      }]
   },
   "browserslist": {
     "production": [
@@ -60,6 +54,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^3.2.3"
   }
 }
